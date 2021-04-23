@@ -6,6 +6,8 @@ Created on Wed Dec 16 12:42:08 2020
 """
 
 import pandas as pd
+
+pd.options.mode.chained_assignment = None  # default='warn'
 import numpy as np
 
 # part1 import
@@ -18,7 +20,6 @@ df[["min", "max"]] = df.policy.str.split(
     expand=True,
 )
 
-print(type(df["min"][0]))
 
 df["part1"] = 0
 df["part2"] = 0
@@ -43,7 +44,6 @@ for i in range(0, len(df.index)):
             # print(df["input"][i][int(df["max"][i])-1])
             # print(df["input"][i][int(df["min"][i])-1])
             # print(df["letter"][i])
-
 
 print(df["part1"].value_counts())
 print(df["part2"].value_counts())
