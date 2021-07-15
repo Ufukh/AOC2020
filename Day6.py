@@ -27,4 +27,3 @@ with open("Data/inputd63.txt", "r") as inputd6:
 
 print("Answer to part 1 is : ", countsp1)
 print("Answer to part 2 is : ", countsp2)
-# Part 2
